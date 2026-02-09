@@ -4,4 +4,4 @@ langchain
 openai
 python-dotenv
 requests
-.env
+python-dotenv
