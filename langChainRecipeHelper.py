@@ -1,11 +1,8 @@
 
-from dotenv import load_dotenv
 from langchain_openai import OpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
-
-load_dotenv()
 
 llm = OpenAI(temperature=0)
 parser = StrOutputParser()
@@ -48,3 +45,4 @@ combined_chain = (
     .assign(dish=dish_chain)
     .assign(recipe=recipe_chain)
 )
+
